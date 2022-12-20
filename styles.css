@@ -1,0 +1,152 @@
+/* VARIABLES */
+* {
+  --color1: hsl(158, 36%, 37%);
+  --color2: hsl(30, 38%, 92%);
+  --color3: hsl(228, 12%, 48%);
+  --color4: hsl(0, 0%, 100%);
+  --color5: hsl(212, 21%, 14%);
+  --fontFraunces: "Fraunces", serif;
+  --fontMontserrat: "Montserrat", sans-serif;
+}
+
+/* LAYOUT */
+body {
+  box-sizing: border-box;
+  height: 120vh;
+  width: 100vw;
+  position: relative;
+  overflow-x: hidden;
+}
+body .card {
+  height: 750px;
+  width: 375px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+}
+body .card .card__img {
+  width: 100%;
+  height: 45%;
+  background-position: center;
+  background-size: cover;
+}
+body .card .card__content {
+  width: 100%;
+  height: 55%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body .card .card__content .content__container {
+  width: 85%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+body .card .card__content .content__container .container__prices {
+  display: flex;
+}
+body .card .card__content .content__container .container__prices .prices__priceDiscount {
+  margin-left: 15px;
+  align-self: center;
+}
+body .card .card__content .content__container .container__btn {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* IN MEDIA LAYOUT */
+@media screen and (min-width: 1440px) {
+  body .card {
+    height: 450px;
+    width: 600px;
+    flex-direction: row;
+  }
+  body .card .card__img {
+    width: 50%;
+    height: 100%;
+  }
+  body .card .card__content {
+    width: 50%;
+    height: 100%;
+    border-radius: 0 12px 12px 0;
+  }
+}
+
+/* STYLING */
+.body--style {
+  background-color: var(--color2);
+}
+body .card .card__img--style {
+  background-image: url(./images/image-product-mobile.jpg);
+  border-radius: 12px 12px 0 0;
+}
+body .card .card__content--style {
+  background-color: var(--color4);
+}
+body .card .card__content .content__container .container__product--style {
+  font-family: var(--fontMontserrat);
+  color: var(--color3);
+  font-size: 12px;
+}
+body .card .card__content .content__container .container__title--style {
+  font-family: var(--fontFraunces);
+  font-size: 30px;
+  line-height: 30px;
+}
+body .card .card__content .content__container .container__description--style {
+  font-size: 14px;
+  font-family: var(--fontMontserrat);
+  color: var(--color3);
+  text-align: left;
+  line-height: 20px;
+}
+body .card .card__content .content__container .container__prices .prices__priceActual--style {
+  font-size: 30px;
+  color: var(--color1);
+  font-family: var(--fontFraunces);
+}
+body .card .card__content .content__container .container__prices .prices__priceDiscount--style {
+  font-size: 16px;
+  font-family: var(--fontFraunces);
+  text-decoration: line-through;
+  color: var(--color3);
+}
+body .card .card__content .content__container .container__btn--style {
+  border: 1px solid var(--color3);
+  font-family: var(--fontFraunces);
+  background-color: var(--color1);
+  color: var(--color4);
+  border-radius: 5px;
+  padding: 15px;
+  cursor: pointer;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+body .card .card__content .content__container .container__btn--style:hover {
+  background-color: var(--color5);
+  transition: 0.5s;
+}
+.attribution--style {
+  font-size: 11px;
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 14px;
+  font-family: var(--fontMontserrat);
+}
+.attribution--style a {
+  color: hsl(228, 45%, 44%);
+}
+
+/* IN MEDIA STYLING */
+@media screen and (min-width: 1440px) {
+  body .card .card__img--style {
+    background-image: url(./images/image-product-desktop.jpg);
+    border-radius: 12px 0 0 12px;
+  }
+}
